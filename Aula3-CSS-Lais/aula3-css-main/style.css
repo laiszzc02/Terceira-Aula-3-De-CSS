@@ -1,0 +1,53 @@
+/*remove margnes padrão do navegador*/
+@import url('https.//fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+/* fundo agora com um tom marrom para parecer um app de padaria*/
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: #654e81;(99, 55, 21);
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.container.card{
+    position: relative;
+    width: 320px;
+    height: 440px;
+    /*sombra ajustadas para um brilho sutil azulado*/
+  box-shadow: inset: 5px 5px 5px rgba(0,0,0,0.4),inset-5px-5px 15px rgba(255,255,255,0.05),-5px -5px 15px rgba(0,0,0,0.5);
+  border-radius: 15px;
+ margin:30px;
+
+}
+.container.card.box{
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    background:plum /* fundo interno um pouco maisn claro que o body*/
+    border:1px solid #222;
+    border-radius: 15px;
+    display:flex;
+    justify-content:center;
+    aling-intems: center;
+    transition: 0.5s;
+}
+.container.card.hover.box{
+    transform: translateY(-50px);
+    background: linear-gradient(-50px);
+    box-shadow:0 15px 35px rgba(142,45,226,0.4);
+}
