@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Fundo agora com tom de azul marinho bem escuro para parecer app de musica*/
+body{
+    display: flex;
+    justify-content:center;
+    min-height: 100vh;
+    background-color: rgb(171, 0, 151);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+.container .card{
+    position: relative;
+    width: 350px;
+    height: 440px;
+
+    /*sombras ajustadas para um brilho sutil azulado*/
+    box-shadow:
+        inset 5px 5px 5px rgb(152,223,244),
+        inset -5px -5px 15px rgb(222,222,221),
+        5px 5px 15px rgb(243,190,255);
+        border-radius: 15px;
+        margin: 30px;
+}
+
+.container .card .box{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    background: rgb(245,163,252);
+    border: 2px solid #222;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+
+.container .card:hover .box{
+    transform: translateY(-50px);
+    background: linear-gradient(45deg, #8e2de2,#4a00e0);
+    box-shadow: 0 15px 35px rgba(142, 45, 226, 0.4);
+}
+.container .card .box .content{
+    padding:20px;
+    text-align: center;
+}
+/*Estilização do ícone musical*/
+.container .card .box .content .icon{
+    font-size: 4em;
+    color:rgb(65, 19, 78); 
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+/*No hover, o ícone fica branco para destacar no gradiente*/
+.container .card:hover .box .content .icon{
+    color: #fff;
+    transform: scale(1.1);
+}
+.container .card .box .content h2{
+    position:absolute;
+    top:- 10px;
+    right:30px;
+    font-size:8em;
+    color: rgb(255, 255, 255);
+}
+
